@@ -1,9 +1,5 @@
 import { WalletType } from '../../types';
 
-type LoginType = {
-  email: string;
-};
-
 export const SUBMIT_USER = 'SUBMIT_USER';
 export const SUBMIT_WALLET = 'SUBMIT_WALLET';
 

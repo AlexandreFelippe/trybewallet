@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { submitUser } from '../redux/actions';
+import styles from './Login.module.css';
 
 const initialState = {
   email: '',
@@ -29,9 +30,9 @@ function Login() {
   }
 
   return (
-    <div>
+    <div className={ styles.container }>
       <h1>TRYBE WALLET</h1>
-      <form>
+      <form className="{ styles.form }">
         <label htmlFor="">
           Email:
           <input
