@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { submitUser } from '../redux/actions';
 import styles from './Login.module.css';
@@ -10,6 +10,8 @@ const initialState = {
 };
 
 function Login() {
+  const rootState = useSelector((state) => state);
+  console.log(rootState);
   const [login, setLogin] = useState(initialState);
   const navigate = useNavigate();
   const dispatch = useDispatch();

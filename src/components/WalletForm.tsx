@@ -32,6 +32,7 @@ function WalletForm() {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    console.log(form);
     dispatch(fetchExpenses(form));
     setForm(expenses);
   }
@@ -84,9 +85,9 @@ function WalletForm() {
           value={ method }
           onChange={ handleChange }
         >
-          <option value="dinheiro">Dinheiro</option>
-          <option value="cartão de crédito">Cartão de crédito</option>
-          <option value="cartão de débito">Cartão de débito</option>
+          <option value="Dinheiro">Dinheiro</option>
+          <option value="Cartão de crédito">Cartão de crédito</option>
+          <option value="Cartão de débito">Cartão de débito</option>
         </select>
       </label>
       <label>

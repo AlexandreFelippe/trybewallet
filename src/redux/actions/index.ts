@@ -28,9 +28,9 @@ export const submitCurrencies = () => {
   };
 };
 
-export const submitExpenses = (data: object, expenses: object) => ({
+export const submitExpenses = (expenses: object, data: object) => ({
   type: SUBMIT_EXPENSES,
-  payload: { expenses, data },
+  payload: { data, expenses },
 });
 
 export function fetchExpenses(expenses: object) {
