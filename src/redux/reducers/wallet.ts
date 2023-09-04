@@ -1,6 +1,6 @@
 import { AnyAction } from 'redux';
 import { WalletType } from '../../types';
-import { SUBMIT_CURRENCIES, SUBMIT_EXPENSES } from '../actions';
+import { DELETE_EXPENSE, SUBMIT_CURRENCIES, SUBMIT_EXPENSES } from '../actions';
 
 const INITIAL_STATE: WalletType = {
   idToEdit: 0,
@@ -27,6 +27,11 @@ const walletReducer = (state = INITIAL_STATE, action: AnyAction) => {
             exchangeRates: action.payload.data,
           },
         ],
+      };
+    case DELETE_EXPENSE:
+      return {
+        ...state,
+        expenses: state.expenses.filter((expense) => expense.id !== action.payload),
       };
     default:
       return state;

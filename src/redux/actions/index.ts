@@ -5,6 +5,7 @@ export const SUBMIT_USER = 'SUBMIT_USER';
 export const FETCH_API = 'FETCH_API';
 export const SUBMIT_EXPENSES = 'SUBMIT_EXPENSES';
 export const SUBMIT_CURRENCIES = 'SUBMIT_CURRENCIES';
+export const DELETE_EXPENSE = 'DELETE_EXPENSE';
 
 export const submitUser = (email: string) => ({
   type: SUBMIT_USER,
@@ -43,3 +44,8 @@ export function fetchExpenses(expenses: object) {
     }
   };
 }
+
+export const deleteExpense = (id: number) => ({
+  type: DELETE_EXPENSE,
+  payload: id,
+});
