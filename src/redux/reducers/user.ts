@@ -1,9 +1,10 @@
 import { AnyAction } from 'redux';
-import { User } from '../../types';
+import { UserType } from '../../types';
 import { SUBMIT_USER } from '../actions';
 
-const INITIAL_STATE: User = {
+const INITIAL_STATE: UserType = {
   email: '',
+  password: '',
 };
 
 const userReducer = (state = INITIAL_STATE, action: AnyAction) => {
