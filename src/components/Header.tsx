@@ -1,6 +1,5 @@
 import { useSelector } from 'react-redux';
-import { act } from 'react-dom/test-utils';
-import { ExpensesType, GlobalStateType } from '../types';
+import { GlobalStateType } from '../types';
 
 function Header() {
   const { user } = useSelector((state: GlobalStateType) => state);
